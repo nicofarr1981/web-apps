@@ -1,0 +1,20 @@
+<h1>Roll the Dice</h1>
+
+<%  
+    die1 = rand(1..6)
+    die2 = rand(1..6)
+    total = die1 + die2
+%>
+
+<p>
+    <img src="images/dice/<%= die1 %>.svg"></img>
+    <img src="images/dice/<%= die2 %>.svg"></img>
+</p>
+
+<p>
+    The total is <%= total %>
+</p>
+
+<p>
+    <a href="https://3000-nicofarr1981-webapps-6tt48iaxo0h.ws-us44.gitpod.io/dice">Roll again!</a>
+</p>

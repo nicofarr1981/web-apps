@@ -1,0 +1,26 @@
+<h1>Deal cards</h1>
+
+<%  
+    ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
+    suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
+    deck = []
+    for rank in ranks
+        for suit in suits
+            card = "#{rank} of #{suit}"
+            deck.push(card)
+        end
+    end
+
+    shuffled_deck = deck.shuffle
+    hand = shuffled_deck[0,5]
+%>
+
+<p>
+    <% for card in hand %>
+        <img src="images/cards/<%= card.downcase.gsub(" ","_") %>.svg"></img>
+    <% end %>
+</p>
+
+<p>
+    <a href="https://3000-nicofarr1981-webapps-6tt48iaxo0h.ws-us44.gitpod.io/card">Play again!</a>
+</p>
