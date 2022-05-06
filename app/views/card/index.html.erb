@@ -6,7 +6,7 @@
     deck = []
     for rank in ranks
         for suit in suits
-            card = "#{rank} of #{suit}"
+            card = "#{rank}_of_#{suit}"
             deck.push(card)
         end
     end
@@ -17,7 +17,7 @@
 
 <p>
     <% for card in hand %>
-        <img src="images/cards/<%= card.downcase.gsub(" ","_") %>.svg"></img>
+        <img src="images/cards/<%= card.downcase %>.svg"></img>
     <% end %>
 </p>
 
